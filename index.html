@@ -1,91 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KaleidoTrip</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaleidoTrip - Discover Your Next Adventure</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">KaleidoTrip</div>
-    <nav>
-      <a href="#">Flights</a>
-      <a href="#">Hotels</a>
-      <a href="#">Packages</a>
-      <a href="#">Deals</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">KaleidoTrip</div>
+      <ul class="nav-links">
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Packages</a></li>
+        <li><a href="#">Deals</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="signin">Sign In</button>
+        <button class="signup">Sign Up</button>
+      </div>
     </nav>
-    <div class="auth-buttons">
-      <button id="signInBtn">Sign In</button>
-      <button id="signUpBtn">Sign Up</button>
-    </div>
   </header>
 
   <section class="hero">
-    <h1>Discover Your Next Adventure</h1>
-    <p>Book flights, hotels, and experiences at the best prices. Your dream vacation starts here.</p>
-    <div class="search-box">
-      <input type="text" id="fromInput" placeholder="From: e.g. Manila" />
-      <input type="text" id="toInput" placeholder="To: e.g. Tokyo" />
-      <input type="date" id="dateInput" />
-      <input type="number" id="passengersInput" min="1" value="1" />
-      <button id="searchBtn">Search Flights</button>
+    <div class="hero-content">
+      <h1>Discover Your Next Adventure</h1>
+      <p>Book flights, hotels, and experiences at the best prices. Your dream vacation starts here.</p>
+      <form class="search-bar">
+        <input type="text" placeholder="From: New York, NY">
+        <input type="text" placeholder="To: Paris, France">
+        <input type="date">
+        <select>
+          <option>1 Adult</option>
+          <option>2 Adults</option>
+          <option>3 Adults</option>
+        </select>
+        <button type="button" onclick="searchFlights()">Search Flights</button>
+      </form>
     </div>
-  </section>
-
-  <section class="results" id="resultsSection">
-    <h2>Available Flights</h2>
-    <div id="resultsContainer"></div>
   </section>
 
   <section class="destinations">
     <h2>Popular Destinations</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Paris">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Paris">
         <h3>Paris, France</h3>
-        <p>City of lights</p>
+        <p>City of Lights</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691" alt="Tokyo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tokyo_Tower_and_around_Skyscrapers.jpg" alt="Tokyo">
         <h3>Tokyo, Japan</h3>
-        <p>Food & culture</p>
+        <p>Culture and Cuisine</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Bali">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Bali_Indonesia_Pura_Ulun_Danu_Bratan_Temple.jpg" alt="Bali">
         <h3>Bali, Indonesia</h3>
-        <p>Beaches & rice terraces</p>
+        <p>Beaches and Nature</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f" alt="Iceland">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Reykjavik_Panorama.jpg" alt="Reykjavik">
         <h3>Reykjavik, Iceland</h3>
-        <p>Northern lights</p>
+        <p>Northern Lights</p>
       </div>
     </div>
   </section>
 
-  <!-- Sign In Modal -->
-  <div id="signInModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeSignIn">&times;</span>
-      <h2>Sign In</h2>
-      <input type="text" id="signInEmail" placeholder="Email" />
-      <input type="password" id="signInPassword" placeholder="Password" />
-      <button id="submitSignIn">Login</button>
-    </div>
-  </div>
-
-  <!-- Sign Up Modal -->
-  <div id="signUpModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeSignUp">&times;</span>
-      <h2>Create Account</h2>
-      <input type="text" id="signUpName" placeholder="Full Name" />
-      <input type="email" id="signUpEmail" placeholder="Email" />
-      <input type="password" id="signUpPassword" placeholder="Password" />
-      <button id="submitSignUp">Register</button>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 KaleidoTrip. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
