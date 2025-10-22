@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KaleidoTrip - Discover Your Next Adventure</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaleidoTrip</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">KaleidoTrip</div>
-      <ul class="nav-links">
-        <li><a href="#">Flights</a></li>
-        <li><a href="#">Hotels</a></li>
-        <li><a href="#">Packages</a></li>
-        <li><a href="#">Deals</a></li>
-      </ul>
-      <div class="auth-buttons">
-        <button class="signin">Sign In</button>
-        <button class="signup">Sign Up</button>
-      </div>
+  <header class="navbar">
+    <div class="logo">KaleidoTrip</div>
+    <nav>
+      <a href="#">Flights</a>
+      <a href="#">Hotels</a>
+      <a href="#">Packages</a>
+      <a href="#">Deals</a>
     </nav>
+    <div class="auth-buttons">
+      <button onclick="openDemo()">Sign In</button>
+      <button onclick="downloadFiles()">Sign Up</button>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Discover Your Next Adventure</h1>
-      <p>Book flights, hotels, and experiences at the best prices. Your dream vacation starts here.</p>
-      <form class="search-bar">
-        <input type="text" placeholder="From: New York, NY">
-        <input type="text" placeholder="To: Paris, France">
-        <input type="date">
-        <select>
-          <option>1 Adult</option>
-          <option>2 Adults</option>
-          <option>3 Adults</option>
-        </select>
-        <button type="button" onclick="searchFlights()">Search Flights</button>
-      </form>
+    <h1>Discover Your Next Adventure</h1>
+    <p>Book flights, hotels, and experiences at the best prices. Your dream vacation starts here.</p>
+    <div class="search-box">
+      <input type="text" placeholder="From: New York, NY" />
+      <input type="text" placeholder="To: Paris, France" />
+      <input type="date" />
+      <input type="number" min="1" value="1" />
+      <button id="searchBtn">Search Flights</button>
     </div>
   </section>
 
@@ -45,31 +37,27 @@
     <h2>Popular Destinations</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Paris">
+        <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Paris">
         <h3>Paris, France</h3>
-        <p>City of Lights</p>
+        <p>City of lights</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tokyo_Tower_and_around_Skyscrapers.jpg" alt="Tokyo">
+        <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691" alt="Tokyo">
         <h3>Tokyo, Japan</h3>
-        <p>Culture and Cuisine</p>
+        <p>Food & culture</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Bali_Indonesia_Pura_Ulun_Danu_Bratan_Temple.jpg" alt="Bali">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Bali">
         <h3>Bali, Indonesia</h3>
-        <p>Beaches and Nature</p>
+        <p>Beaches & rice terraces</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Reykjavik_Panorama.jpg" alt="Reykjavik">
+        <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f" alt="Iceland">
         <h3>Reykjavik, Iceland</h3>
-        <p>Northern Lights</p>
+        <p>Northern lights</p>
       </div>
     </div>
   </section>
-
-  <footer>
-    <p>© 2025 KaleidoTrip. All rights reserved.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
