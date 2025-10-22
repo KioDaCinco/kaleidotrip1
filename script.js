@@ -5,3 +5,7 @@ function openDemo() {
 function downloadFiles() {
   alert("You already have all files: index.html, style.css, and script.js. Upload them to GitHub to publish!");
 }
+
+document.getElementById("searchBtn").addEventListener("click", function() {
+  alert("Searching for flights... (demo only)");
+});

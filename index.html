@@ -1,113 +1,63 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KaleidoTrip — Discover Your Next Adventure</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaleidoTrip</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand"><span class="logo-dot"></span><span>Kaleido</span><span style="color:white;font-weight:400">Trip</span></div>
-      <nav>
-        <ul>
-          <li><a href="#">Flights</a></li>
-          <li><a href="#">Hotels</a></li>
-          <li><a href="#">Packages</a></li>
-          <li><a href="#">Deals</a></li>
-        </ul>
-      </nav>
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="btn" href="#">Sign In</a>
-        <a class="primary" href="#">Sign Up</a>
-      </div>
+  <header class="navbar">
+    <div class="logo">KaleidoTrip</div>
+    <nav>
+      <a href="#">Flights</a>
+      <a href="#">Hotels</a>
+      <a href="#">Packages</a>
+      <a href="#">Deals</a>
+    </nav>
+    <div class="auth-buttons">
+      <button onclick="openDemo()">Sign In</button>
+      <button onclick="downloadFiles()">Sign Up</button>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-inner">
-      <span class="eyebrow">Discover</span>
-      <h1>Discover Your Next Adventure</h1>
-      <p class="lead">Book flights, hotels, and experiences at the best prices. Your dream vacation starts here.</p>
-
-      <div class="search-card">
-        <form onsubmit="event.preventDefault();openDemo();">
-          <div class="search-row">
-            <div class="field">
-              <label class="muted">From</label>
-              <input type="text" placeholder="New York, NY" />
-            </div>
-            <div class="field">
-              <label class="muted">To</label>
-              <input type="text" placeholder="Paris, France" />
-            </div>
-            <div class="field">
-              <label class="muted">Depart</label>
-              <input type="date" />
-            </div>
-            <div class="field">
-              <label class="muted">Passengers</label>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </div>
-            <div class="search-actions">
-              <button class="primary" type="submit">Search Flights</button>
-            </div>
-          </div>
-        </form>
-      </div>
+    <h1>Discover Your Next Adventure</h1>
+    <p>Book flights, hotels, and experiences at the best prices. Your dream vacation starts here.</p>
+    <div class="search-box">
+      <input type="text" placeholder="From: New York, NY" />
+      <input type="text" placeholder="To: Paris, France" />
+      <input type="date" />
+      <input type="number" min="1" value="1" />
+      <button id="searchBtn">Search Flights</button>
     </div>
   </section>
 
-  <main class="wrap">
-    <section class="section">
-      <h3>Popular Destinations</h3>
-      <div class="grid">
-        <div class="card"><img src="https://picsum.photos/id/1018/800/400"><div class="meta"><strong>Paris, France</strong><div class="muted">City of lights</div></div></div>
-        <div class="card"><img src="https://picsum.photos/id/1015/800/400"><div class="meta"><strong>Tokyo, Japan</strong><div class="muted">Food & culture</div></div></div>
-        <div class="card"><img src="https://picsum.photos/id/1025/800/400"><div class="meta"><strong>Bali, Indonesia</strong><div class="muted">Beaches & rice terraces</div></div></div>
-        <div class="card"><img src="https://picsum.photos/id/1002/800/400"><div class="meta"><strong>Reykjavík, Iceland</strong><div class="muted">Northern lights</div></div></div>
+  <section class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Paris">
+        <h3>Paris, France</h3>
+        <p>City of lights</p>
       </div>
-
-      <div class="why">
-        <div class="col"><strong>Best Price Guarantee</strong><p class="muted">Find competitive prices on flights and hotels.</p></div>
-        <div class="col"><strong>24/7 Support</strong><p class="muted">We're here to help at every step of your trip.</p></div>
-        <div class="col"><strong>Global Coverage</strong><p class="muted">Travel the world with partners across 150+ countries.</p></div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691" alt="Tokyo">
+        <h3>Tokyo, Japan</h3>
+        <p>Food & culture</p>
       </div>
-
-      <div class="cta">
-        <h3>Ready to Start Your Journey?</h3>
-        <p class="muted">Join millions of travelers who trust KaleidoTrip for their adventures.</p>
-        <div><button class="primary" onclick="openDemo()">Start Planning</button> <button class="btn" onclick="downloadFiles()">Download Files</button></div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Bali">
+        <h3>Bali, Indonesia</h3>
+        <p>Beaches & rice terraces</p>
       </div>
-    </section>
-
-    <footer>
-      <div class="wrap footer-grid">
-        <div>
-          <div class="brand"><span class="logo-dot"></span><span>Kaleido</span><span style="color:white;font-weight:400">Trip</span></div>
-          <p class="muted">A modern booking platform focused on simplicity and beautiful experiences.</p>
-        </div>
-        <div>
-          <strong>Company</strong>
-          <ul class="muted"><li>About</li><li>Careers</li><li>Press</li></ul>
-        </div>
-        <div>
-          <strong>Support</strong>
-          <ul class="muted"><li>Help Center</li><li>Contact</li><li>Safety</li></ul>
-        </div>
-        <div>
-          <strong>Legal</strong>
-          <ul class="muted"><li>Privacy</li><li>Terms</li></ul>
-        </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f" alt="Iceland">
+        <h3>Reykjavik, Iceland</h3>
+        <p>Northern lights</p>
       </div>
-      <div class="copyright">© 2025 KaleidoTrip. All rights reserved.</div>
-    </footer>
-  </main>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
